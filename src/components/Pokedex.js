@@ -51,7 +51,7 @@ class Pokedex extends React.Component {
         </Button>
         {pokemonTypes.map((type) => (
           <Button
-            dataTestId={`pokemon-type-button`}
+            dataTestId={'pokemon-type-button'}
             key={ type }
             onClick={ () => this.filterPokemons(type) }
             className="filter-button"
