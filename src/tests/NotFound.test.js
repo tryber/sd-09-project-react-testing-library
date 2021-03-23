@@ -5,7 +5,7 @@ import NotFound from '../components/NotFound';
 afterEach(cleanup);
 
 describe('NotFound.js tests', () => {
-  it('should contain a h2 with the text "Page requested not found"', () => {
+  it('should contain an h2 with the text "Page requested not found"', () => {
     render(<NotFound />);
     const heading = screen
       .getByRole('heading', { level: 2, name: /Page requested not found/ });
