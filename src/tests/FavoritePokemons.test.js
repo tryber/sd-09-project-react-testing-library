@@ -7,6 +7,7 @@ import App from '../App';
 
 afterEach(cleanup);
 
+const POKEMON_NAME_ID = 'pokemon-name';
 const clickNextButton = () => userEvent.click(screen.getByTestId('next-pokemon'));
 
 const favoritePokemonAndGetItsName = (props = { uncheck: false }) => {
@@ -15,7 +16,7 @@ const favoritePokemonAndGetItsName = (props = { uncheck: false }) => {
   const favoriteCheckbox = screen.getByLabelText(/Pokémon favoritado\?/);
   userEvent.click(favoriteCheckbox);
   if (props.uncheck) userEvent.click(favoriteCheckbox);
-  return screen.getByTestId('pokemon-name').innerHTML;
+  return screen.getByTestId(POKEMON_NAME_ID).innerHTML;
 };
 
 describe('FavoritePokemons.js tests', () => {
@@ -34,7 +35,7 @@ describe('FavoritePokemons.js tests', () => {
       clickNextButton();
       favoritedPokemonsNames.push(favoritePokemonAndGetItsName());
       history.push('/favorites');
-      const pokemonsNamesInFavoritesPage = screen.queryAllByTestId('pokemon-name');
+      const pokemonsNamesInFavoritesPage = screen.queryAllByTestId(POKEMON_NAME_ID);
       expect(pokemonsNamesInFavoritesPage).toHaveLength(2);
       expect(pokemonsNamesInFavoritesPage[0])
         .toHaveTextContent(favoritedPokemonsNames[0]);
@@ -52,7 +53,9 @@ describe('FavoritePokemons.js tests', () => {
       clickNextButton();
       favoritedPokemonsNames.push(favoritePokemonAndGetItsName({ unckeck: true }));
       history.push('/favorites');
-      const pokemonsNamesInFavoritesPage = screen.queryAllByTestId('pokemon-name');
+      const pokemonsNamesInFavoritesPage = screen.queryAllByTestId(POKEMON_NAME_ID);
       expect(pokemonsNamesInFavoritesPage).toHaveLength(0);
+      expect(screen.queryByText(favoritedPokemonsNames[0])).toBeNull();
+      expect(screen.queryByText(favoritedPokemonsNames[1])).toBeNull();
     });
 });
