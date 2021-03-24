@@ -1,4 +1,4 @@
-### Termos de acordo
+### Termos de acordo ###
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
 
@@ -186,13 +186,13 @@ ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
 
 
     ![image](testepassando.png)
-    
+
 
    Uma falha ocorre quando os testes unitários não cobrem 100% de caso de uso gerados pelo Stryker. Nesse caso, algo semelhante à imagem abaixo aparecerá.
     ![image](testefalhando.png)
-    
+
    * Repare que, na tabela, 4 casos de uso constam como `Killed` e 3 constam como `Survived`. Isso significa que **3 casos de uso não foram contemplados pelos seus testes**! Os casos de uso gerados, que geraram os erros, aparecem acima. Na linha verde (ao lado de cada símbolo `+`), o Stryker exibe o erro que ele injetou no teste para testar um caso de uso. Esse erro não foi coberto pelo seu teste.
-    
+
 
 # Requisitos do projeto
 
@@ -216,16 +216,16 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
 
     - O terceiro link deve possuir o texto `Favorite Pokémons`.
 
-  - Teste se a aplicação é redirecionada para a página inicial, na URL `/` ao clicar no link `Home` da barra de navegação. 
+  - Teste se a aplicação é redirecionada para a página inicial, na URL `/` ao clicar no link `Home` da barra de navegação.
 
-  - Teste se a aplicação é redirecionada para a página de `About`, na URL `/about`, ao clicar no link `About` da barra de navegação. 
+  - Teste se a aplicação é redirecionada para a página de `About`, na URL `/about`, ao clicar no link `About` da barra de navegação.
 
   - Teste se a aplicação é redirecionada para a página de `Pokémons Favoritados`, na URL `/favorites`, ao clicar no link `Favorite Pokémons` da barra de navegação.
 
   - Teste se a aplicação é redirecionada para a página `Not Found` ao entrar em uma URL desconhecida.
 
   **O que será verificado:**
-  
+
   - Será avaliado se o arquivo teste `App.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
 
 ### 2. Teste o componente `<About.js /.`
@@ -239,7 +239,7 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
   - Teste se a página contém a seguinte imagem de uma Pokédex: `https://cdn.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png`.
 
   **O que será verificado:**
-    
+
   - Será avaliado se o arquivo teste `About.test.js` contemplam 100% dos casos de uso criados pelo Stryker.
 
 ### 3. Teste o componente `<FavoritePokemons.js />`
@@ -297,7 +297,7 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
     - Os botões de filtragem devem ser dinâmicos;
 
     - Deve existir um botão de filtragem para cada tipo de Pokémon disponível nos dados, sem repetição. Ou seja, a sua Pokédex deve possuir pokémons do tipo `Fire`, `Psychic`, `Electric`, `Bug`, `Poison`, `Dragon` e `Normal`;
-    
+
     - Deve ser mostrado como opção de filtro, um botão para cada um dos tipos. Além disso, o botão `All` precisa estar **sempre** visível.
 
   - O botão de `Próximo pokémon` deve ser desabilitado quando a lista filtrada de Pokémons tiver um só pokémon.
@@ -320,8 +320,8 @@ Todos os arquivos de teste que vocês usarão **já estão previamente criados e
 
   - Teste se o card do Pokémon indicado na Pokédex contém um link de navegação para exibir detalhes deste Pokémon. O link deve possuir a URL `/pokemons/<id>`, onde `<id>` é o id do Pokémon exibido;
 
-  - Teste se ao clicar no link de navegação do Pokémon, é feito o redirecionamento da aplicação para a página de detalhes de Pokémon. 
-  
+  - Teste se ao clicar no link de navegação do Pokémon, é feito o redirecionamento da aplicação para a página de detalhes de Pokémon.
+
   - Teste também se a URL exibida no navegador muda para `/pokemon/<id>`, onde `<id>` é o id do Pokémon cujos detalhes se deseja ver;
 
   - Teste se existe um ícone de estrela nos Pokémons favoritados.
