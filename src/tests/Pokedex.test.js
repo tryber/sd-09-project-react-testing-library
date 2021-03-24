@@ -140,7 +140,7 @@ describe('Pokedex.js tests', () => {
       expect(typeButton[0].innerHTML).toBe(type);
     });
   });
-  it('should disable Next Pokémon button when it has only one pokémon of a type', () => {
+  it('should disable Next Pokémon button when there is only one pokémon of a filtered type', () => {
     renderWithRouter(
       <Pokedex
         pokemons={ pokemons }
