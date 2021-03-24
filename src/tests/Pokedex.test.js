@@ -7,6 +7,7 @@ import pokemons from '../data';
 
 const POKEMON_NAME_ID = 'pokemon-name';
 const NEXT_POKEMON_ID = 'next-pokemon';
+const TYPE_BUTTON_ID = 'pokemon-type-button';
 
 const trueRef = 0.5;
 
@@ -14,6 +15,15 @@ const isPokemonFavoriteMock = pokemons.reduce((acc, pokemon) => {
   acc[pokemon.id] = Math.random() > trueRef;
   return acc;
 }, {});
+
+const checkIfEveryPokemonIsLoaded = () => {
+  pokemons.forEach(async ({ name }) => {
+    const pokemonName = screen.getByTestId(POKEMON_NAME_ID);
+    expect(pokemonName.innerHTML).toBe(name);
+    userEvent.click(screen.getByTestId(NEXT_POKEMON_ID));
+    await waitForElementToBeRemoved(() => pokemonName);
+  });
+};
 
 afterEach(cleanup);
 
@@ -65,7 +75,7 @@ describe('Pokedex.js tests', () => {
         isPokemonFavoriteById={ isPokemonFavoriteMock }
       />,
     );
-    const typeButtons = screen.getAllByTestId('pokemon-type-button');
+    const typeButtons = screen.getAllByTestId(TYPE_BUTTON_ID);
     typeButtons.forEach((button) => {
       userEvent.click(button);
       const selectedType = button.innerHTML;
@@ -97,12 +107,7 @@ describe('Pokedex.js tests', () => {
     );
     const allButton = screen.getByRole('button', { name: 'All' });
     userEvent.click(allButton);
-    pokemons.forEach(async ({ name }) => {
-      const pokemonName = screen.getByTestId(POKEMON_NAME_ID);
-      expect(pokemonName.innerHTML).toBe(name);
-      userEvent.click(screen.getByTestId(NEXT_POKEMON_ID));
-      await waitForElementToBeRemoved(() => pokemonName);
-    });
+    checkIfEveryPokemonIsLoaded();
   });
   it('should have "All" filter enabled when page is loaded', () => {
     renderWithRouter(
@@ -111,12 +116,7 @@ describe('Pokedex.js tests', () => {
         isPokemonFavoriteById={ isPokemonFavoriteMock }
       />,
     );
-    pokemons.forEach(async ({ name }) => {
-      const pokemonName = screen.getByTestId(POKEMON_NAME_ID);
-      expect(pokemonName.innerHTML).toBe(name);
-      userEvent.click(screen.getByTestId(NEXT_POKEMON_ID));
-      await waitForElementToBeRemoved(() => pokemonName);
-    });
+    checkIfEveryPokemonIsLoaded();
   });
   it('should create type buttons dynamically', () => {
     const dummyTypes = ['DummyType1', 'DummyType2', 'DummyType3'];
@@ -132,7 +132,7 @@ describe('Pokedex.js tests', () => {
         isPokemonFavoriteById={ isPokemonFavoriteMock }
       />,
     );
-    const typeButtons = screen.getAllByTestId('pokemon-type-button');
+    const typeButtons = screen.getAllByTestId(TYPE_BUTTON_ID);
     expect(typeButtons).toHaveLength(dummyTypes.length);
     dummyTypes.forEach((type) => {
       const typeButton = screen.getAllByRole('button', { name: type });
@@ -140,22 +140,23 @@ describe('Pokedex.js tests', () => {
       expect(typeButton[0].innerHTML).toBe(type);
     });
   });
-  it('should disable Next Pokémon button when there is only one pokémon of a filtered type', () => {
-    renderWithRouter(
-      <Pokedex
-        pokemons={ pokemons }
-        isPokemonFavoriteById={ isPokemonFavoriteMock }
-      />,
-    );
-    const typeButtons = screen.getAllByTestId('pokemon-type-button');
-    typeButtons.forEach((button) => {
-      const buttonType = button.innerHTML;
-      const pokemonsOfThisType = pokemons.filter(({ type }) => type === buttonType);
-      const buttonShouldBeDisabled = pokemonsOfThisType.length === 1;
-      userEvent.click(button);
-      const nextButton = screen.getByRole('button', { name: 'Próximo pokémon' });
-      if (buttonShouldBeDisabled) expect(nextButton).toBeDisabled();
-      else expect(nextButton).not.toBeDisabled();
+  it('should disable Next Pokémon button when there is only one pokémon of a type',
+    () => {
+      renderWithRouter(
+        <Pokedex
+          pokemons={ pokemons }
+          isPokemonFavoriteById={ isPokemonFavoriteMock }
+        />,
+      );
+      const typeButtons = screen.getAllByTestId(TYPE_BUTTON_ID);
+      typeButtons.forEach((button) => {
+        const buttonType = button.innerHTML;
+        const pokemonsOfThisType = pokemons.filter(({ type }) => type === buttonType);
+        const buttonShouldBeDisabled = pokemonsOfThisType.length === 1;
+        userEvent.click(button);
+        const nextButton = screen.getByRole('button', { name: 'Próximo pokémon' });
+        if (buttonShouldBeDisabled) expect(nextButton).toBeDisabled();
+        else expect(nextButton).not.toBeDisabled();
+      });
     });
-  });
 });

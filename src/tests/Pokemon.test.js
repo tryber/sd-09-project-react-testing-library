@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import { cleanup, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
 import Pokemon from '../components/Pokemon';
