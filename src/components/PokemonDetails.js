@@ -10,11 +10,11 @@ class PokemonDetails extends React.Component {
   static renderHabitat({ foundAt, name }) {
     return (
       <section>
-        <h2>{`Game Locations of ` + `${name}`}</h2>
+        <h2>{`Game Locations of ${name}`}</h2>
         <div className="pokemon-habitat">
           {foundAt.map(({ location, map }) => (
             <div key={ location }>
-              <img src={ `${map}` } alt={`${name} ` + `location`} />
+              <img src={ `${map}` } alt={`${name} location`} />
               <p><em>{location}</em></p>
             </div>
           ))}
@@ -77,7 +77,7 @@ class PokemonDetails extends React.Component {
 
     return (
       <section className="pokemon-details">
-        <h2>{`${pokemon.name} ` + `Details`}</h2>
+        <h2>{`${pokemon.name} Details`}</h2>
         <Pokemon
           pokemon={ pokemon }
           showDetailsLink={ false }

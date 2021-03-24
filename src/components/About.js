@@ -3,7 +3,7 @@ import './about.css';
 
 const About = () => (
   <section>
-    <h2>{`About ` + `Pokédex`}</h2>
+    <h2>{`About Pokédex`}</h2>
     <section>
       <p>
         This application simulates a Pokédex, a
