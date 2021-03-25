@@ -42,7 +42,6 @@ class App extends Component {
 
   renderPokedex() {
     const { isPokemonFavoriteById } = this.state;
-
     return (
       <Pokedex
         pokemons={ pokemons }
@@ -69,7 +68,6 @@ class App extends Component {
   renderRoutes() {
     const { isPokemonFavoriteById } = this.state;
     const favoritePokemons = pokemons.filter(({ id }) => isPokemonFavoriteById[id]);
-
     return (
       <Switch>
         <Route
