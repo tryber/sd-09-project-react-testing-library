@@ -51,8 +51,10 @@
     "@stryker-mutator/core": "^3.3.1",
     "@stryker-mutator/javascript-mutator": "^3.3.1",
     "@stryker-mutator/jest-runner": "^3.3.1",
+    "babel-jest": "^24.9.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-sonarjs": "^0.5.0"
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "jest": "24.9.0"
   }
 }
