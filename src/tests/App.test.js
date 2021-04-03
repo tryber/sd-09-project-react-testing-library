@@ -1,14 +1,24 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-test('renders a reading with the text `Pokédex`', () => {
-  const { getByText } = render(
+describe('Tests App.js', () => {
+  beforeEach(() => render(
     <MemoryRouter>
       <App />
     </MemoryRouter>,
-  );
-  const heading = getByText(/Pokédex/i);
-  expect(heading).toBeInTheDocument();
+  ));
+
+  test('Pokedex Homepage Renders', () => {
+    [/Pokédex/, /Encountered pokémons/].forEach((re) => {
+      expect(screen.getByText(re)).toBeInTheDocument();
+    });
+  });
+
+  test('Navigation Links', () => {
+    [/Home/, /About/, /Favorite Pokémons/].forEach((re) => {
+      expect(screen.getByText(re)).toBeInTheDocument();
+    });
+  });
 });
