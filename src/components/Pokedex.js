@@ -6,6 +6,7 @@ import Button from './Button';
 import Pokemon from './Pokemon';
 import './pokedex.css';
 
+
 class Pokedex extends React.Component {
   constructor(props) {
     super(props);
@@ -68,7 +69,7 @@ class Pokedex extends React.Component {
     const filteredPokemons = this.fetchFilteredPokemons();
     const { pokemonIndex } = this.state;
     const pokemon = filteredPokemons[pokemonIndex];
-
+    console.log(isPokemonFavoriteById[25])
     return (
       <div className="pokedex">
         <h2>{`Encountered pokémons`}</h2>
