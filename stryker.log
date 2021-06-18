@@ -1,0 +1,272 @@
+13:47:19 (11289) INFO ConfigReader Using stryker.conf.json
+13:47:20 (11289) DEBUG BroadcastReporter Broadcasting to reporters ["progress","clear-text","html"]
+13:47:19 (11289) DEBUG ConfigReader Loading config /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker.conf.json
+13:47:19 (11289) DEBUG ConfigReader Loaded config: {
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutate": [
+    "src/components/About.js",
+    "src/App.js",
+    "src/components/FavoritePokemons.js",
+    "src/components/NotFound.js",
+    "src/components/Pokedex.js",
+    "src/components/Pokemon.js",
+    "src/components/PokemonDetails.js"
+  ],
+  "mutator": {
+    "name": "javascript",
+    "excludedMutations": [
+      "ArithmeticOperator",
+      "ArrayDeclaration",
+      "ArrowFunction",
+      "BlockStatement",
+      "BooleanLiteral",
+      "ConditionalExpression",
+      "EqualityOperator",
+      "LogicalOperator",
+      "ObjectLiteral",
+      "UnaryOperator",
+      "UpdateOperator"
+    ]
+  },
+  "testRunner": "jest",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "coverageAnalysis": "off",
+  "jest": {
+    "projectType": "create-react-app"
+  },
+  "allowConsoleColors": true,
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "transpilers": [],
+  "warnings": true,
+  "configFile": "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker.conf.json"
+}
+13:47:20 (11289) DEBUG PluginLoader Loading @stryker-mutator/* from /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator
+13:47:20 (11289) DEBUG PluginLoader Loading plugin "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator" (matched with expression @stryker-mutator/*)
+13:47:20 (11289) DEBUG PluginLoader Loading plugin "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+13:47:20 (11289) DEBUG PluginLoader Loading plugins /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator
+13:47:20 (11289) DEBUG PluginLoader Loading plugins /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner
+13:47:20 (11289) DEBUG PluginLoader Loading plugins /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/reporters/index.js
+13:47:20 (11289) DEBUG buildSchemaWithPluginContributions Contributing 1 schemas from plugins to options validation.
+13:47:20 (11289) INFO InputFileResolver Found 7 of 63 file(s) to be mutated.
+13:47:20 (11289) DEBUG InputFileResolver All input files: [
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker.log",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.babelrc.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.eslintignore",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.eslintrc.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.github/CODEOWNERS",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.github/workflows/main.yml",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.gitignore",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stylelintignore",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stylelintrc.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.trybe/requirements.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/README.md",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/package-lock.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/package.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/favicon.ico",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/index.html",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/logo192.png",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/logo512.png",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/manifest.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/robots.txt",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/public/star-icon.svg",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/App.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/App.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/About.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/Button.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/FavoritePokemons.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/NotFound.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/Pokedex.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/Pokemon.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/PokemonDetails.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/about.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/button.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/favorite-pokemons.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/index.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/not-found.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/pokedex.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/pokemon-details.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/pokemon.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/data.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/index.css",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/index.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/logo.svg",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/renderWithRouter.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/serviceWorker.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/services/pokedexService.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/setupTests.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/About.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/App.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/FavoritePokemons.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/NotFound.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/Pokedex.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/Pokemon.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/tests/PokemonDetails.test.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/types/index.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/About.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/App.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/FavoritePokemons.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/NotFound.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/Pokedex.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/Pokemon.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/stryker/PokemonDetails.conf.json",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/testefalhando.png",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/testepassando.png"
+]
+13:47:20 (11289) DEBUG InputFileResolver Files to mutate: [
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/App.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/About.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/FavoritePokemons.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/NotFound.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/Pokedex.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/Pokemon.js",
+  "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/src/components/PokemonDetails.js"
+]
+13:47:20 (11289) DEBUG TemporaryDirectory Using temp directory "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp"
+13:47:20 (11289) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+13:47:20 (11289) INFO InitialTestExecutor Starting initial test run. This may take a while.
+13:47:20 (11289) DEBUG Sandbox Creating a sandbox for files in /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp/sandbox2036870
+13:47:20 (11289) DEBUG Sandbox Creating test runner 0
+13:47:20 (11289) DEBUG ChildProcessProxy Starting /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 11323
+13:47:21 (11289) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+13:47:20 (11323) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp/sandbox2036870
+13:47:20 (11323) DEBUG PluginLoader Loading @stryker-mutator/* from /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator
+13:47:20 (11323) DEBUG PluginLoader Loading plugin "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator" (matched with expression @stryker-mutator/*)
+13:47:20 (11323) DEBUG PluginLoader Loading plugin "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+13:47:20 (11323) DEBUG PluginLoader Loading plugins /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator
+13:47:21 (11323) DEBUG PluginLoader Loading plugins /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner
+13:47:21 (11323) DEBUG PluginLoader Loading plugins /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/reporters/index.js
+13:47:21 (11323) TRACE JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!src/index.js",
+    "!src/serviceWorker.js"
+  ],
+  "setupFiles": [
+    "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jest-environment-jsdom-fourteen",
+  "transform": {
+    "^.+\\.(js|jsx|ts|tsx)$": "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "jest-watch-typeahead/filename",
+    "jest-watch-typeahead/testname"
+  ],
+  "rootDir": "/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp/sandbox2036870"
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+13:47:21 (11323) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+13:47:21 (11323) DEBUG JestTestRunner Project root is /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp/sandbox2036870
+13:47:21 (11323) TRACE JestLessThan25TestAdapter Invoking Jest with config {"roots":["<rootDir>/src"],"collectCoverageFrom":["**/*.{js,jsx}","!src/index.js","!src/serviceWorker.js"],"setupFiles":["/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-app-polyfill/jsdom.js"],"setupFilesAfterEnv":["<rootDir>/src/setupTests.js"],"testMatch":["<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}","<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"],"testEnvironment":"jest-environment-jsdom-fourteen","transform":{"^.+\\.(js|jsx|ts|tsx)$":"/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/babelTransform.js","^.+\\.css$":"/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/cssTransform.js","^(?!.*\\.(js|jsx|ts|tsx|css|json)$)":"/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/fileTransform.js"},"transformIgnorePatterns":["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$","^.+\\.module\\.(css|sass|scss)$"],"modulePaths":[],"moduleNameMapper":{"^react-native$":"react-native-web","^.+\\.module\\.(css|sass|scss)$":"identity-obj-proxy"},"moduleFileExtensions":["web.js","js","web.ts","ts","web.tsx","tsx","json","web.jsx","jsx","node"],"watchPlugins":["jest-watch-typeahead/filename","jest-watch-typeahead/testname"],"rootDir":"/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp/sandbox2036870","collectCoverage":false,"verbose":false,"bail":false,"notify":false,"reporters":[]}
+13:47:31 (11289) DEBUG ChildProcessProxy Disposing of worker process 11323
+13:47:31 (11289) DEBUG ChildProcessProxy Kill 11323
+13:47:31 (11289) ERROR InitialTestExecutor One or more tests resulted in an error:
+	  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+
+    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+
+    Here's what you can do:
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/en/configuration.html
+
+    Details:
+
+    SyntaxError: /home/jhon/Trybe/Projects/sd-09-project-react-testing-library/.stryker-tmp/sandbox2036870/src/tests/About.test.js: Unexpected token (13:0)
+
+      11 |     userEvent.click(about);
+      12 |   });
+    > 13 |
+         | ^
+
+      at _temp._raise (../../node_modules/@babel/parser/src/parser/error.js:97:45)
+      at _temp.raiseWithData (../../node_modules/@babel/parser/src/parser/error.js:92:17)
+      at _temp.raise (../../node_modules/@babel/parser/src/parser/error.js:41:17)
+      at _temp.unexpected (../../node_modules/@babel/parser/src/parser/util.js:161:16)
+      at _temp.parseExprAtom (../../node_modules/@babel/parser/src/parser/expression.js:1208:20)
+      at _temp.parseExprAtom (../../node_modules/@babel/parser/src/plugins/jsx/index.js:565:22)
+      at _temp.parseExprSubscripts (../../node_modules/@babel/parser/src/parser/expression.js:611:23)
+      at _temp.parseUpdate (../../node_modules/@babel/parser/src/parser/expression.js:591:21)
+      at _temp.parseMaybeUnary (../../node_modules/@babel/parser/src/parser/expression.js:558:23)
+      at _temp.parseExprOps (../../node_modules/@babel/parser/src/parser/expression.js:366:23)
+
+13:47:31 (11289) ERROR StrykerCli an error occurred Error: Something went wrong in the initial test run
+    at InitialTestExecutor.validateResult (/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:86:15)
+    at InitialTestExecutor.run (/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:41:14)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Stryker.runMutationTest (/home/jhon/Trybe/Projects/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/Stryker.js:53:38)
