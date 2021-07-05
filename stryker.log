@@ -1,0 +1,355 @@
+17:26:42 (45658) INFO ConfigReader Using stryker.conf.json
+17:26:43 (45658) DEBUG BroadcastReporter Broadcasting to reporters ["progress","clear-text","html"]
+17:26:42 (45658) DEBUG ConfigReader Loading config /home/richard/sd-09-project-react-testing-library/stryker.conf.json
+17:26:42 (45658) DEBUG ConfigReader Loaded config: {
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutate": [
+    "src/components/About.js",
+    "src/App.js",
+    "src/components/FavoritePokemons.js",
+    "src/components/NotFound.js",
+    "src/components/Pokedex.js",
+    "src/components/Pokemon.js",
+    "src/components/PokemonDetails.js"
+  ],
+  "mutator": {
+    "name": "javascript",
+    "excludedMutations": [
+      "ArithmeticOperator",
+      "ArrayDeclaration",
+      "ArrowFunction",
+      "BlockStatement",
+      "BooleanLiteral",
+      "ConditionalExpression",
+      "EqualityOperator",
+      "LogicalOperator",
+      "ObjectLiteral",
+      "UnaryOperator",
+      "UpdateOperator"
+    ]
+  },
+  "testRunner": "jest",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "coverageAnalysis": "off",
+  "jest": {
+    "projectType": "create-react-app"
+  },
+  "allowConsoleColors": true,
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "transpilers": [],
+  "warnings": true,
+  "configFile": "/home/richard/sd-09-project-react-testing-library/stryker.conf.json"
+}
+17:26:42 (45658) DEBUG PluginLoader Loading @stryker-mutator/* from /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator
+17:26:42 (45658) DEBUG PluginLoader Loading plugin "/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator" (matched with expression @stryker-mutator/*)
+17:26:42 (45658) DEBUG PluginLoader Loading plugin "/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+17:26:42 (45658) DEBUG PluginLoader Loading plugins /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator
+17:26:42 (45658) DEBUG PluginLoader Loading plugins /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner
+17:26:43 (45658) DEBUG PluginLoader Loading plugins /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/reporters/index.js
+17:26:43 (45658) DEBUG buildSchemaWithPluginContributions Contributing 1 schemas from plugins to options validation.
+17:26:43 (45658) INFO InputFileResolver Found 7 of 63 file(s) to be mutated.
+17:26:43 (45658) DEBUG InputFileResolver All input files: [
+  "/home/richard/sd-09-project-react-testing-library/package-lock.json",
+  "/home/richard/sd-09-project-react-testing-library/src/renderWithRouter.js",
+  "/home/richard/sd-09-project-react-testing-library/stryker.log",
+  "/home/richard/sd-09-project-react-testing-library/.babelrc.json",
+  "/home/richard/sd-09-project-react-testing-library/.eslintignore",
+  "/home/richard/sd-09-project-react-testing-library/.eslintrc.json",
+  "/home/richard/sd-09-project-react-testing-library/.github/CODEOWNERS",
+  "/home/richard/sd-09-project-react-testing-library/.github/workflows/main.yml",
+  "/home/richard/sd-09-project-react-testing-library/.gitignore",
+  "/home/richard/sd-09-project-react-testing-library/.stylelintignore",
+  "/home/richard/sd-09-project-react-testing-library/.stylelintrc.json",
+  "/home/richard/sd-09-project-react-testing-library/.trybe/requirements.json",
+  "/home/richard/sd-09-project-react-testing-library/README.md",
+  "/home/richard/sd-09-project-react-testing-library/package.json",
+  "/home/richard/sd-09-project-react-testing-library/public/favicon.ico",
+  "/home/richard/sd-09-project-react-testing-library/public/index.html",
+  "/home/richard/sd-09-project-react-testing-library/public/logo192.png",
+  "/home/richard/sd-09-project-react-testing-library/public/logo512.png",
+  "/home/richard/sd-09-project-react-testing-library/public/manifest.json",
+  "/home/richard/sd-09-project-react-testing-library/public/robots.txt",
+  "/home/richard/sd-09-project-react-testing-library/public/star-icon.svg",
+  "/home/richard/sd-09-project-react-testing-library/src/App.css",
+  "/home/richard/sd-09-project-react-testing-library/src/App.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/About.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/Button.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/FavoritePokemons.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/NotFound.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/Pokedex.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/Pokemon.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/PokemonDetails.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/about.css",
+  "/home/richard/sd-09-project-react-testing-library/src/components/button.css",
+  "/home/richard/sd-09-project-react-testing-library/src/components/favorite-pokemons.css",
+  "/home/richard/sd-09-project-react-testing-library/src/components/index.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/not-found.css",
+  "/home/richard/sd-09-project-react-testing-library/src/components/pokedex.css",
+  "/home/richard/sd-09-project-react-testing-library/src/components/pokemon-details.css",
+  "/home/richard/sd-09-project-react-testing-library/src/components/pokemon.css",
+  "/home/richard/sd-09-project-react-testing-library/src/data.js",
+  "/home/richard/sd-09-project-react-testing-library/src/index.css",
+  "/home/richard/sd-09-project-react-testing-library/src/index.js",
+  "/home/richard/sd-09-project-react-testing-library/src/logo.svg",
+  "/home/richard/sd-09-project-react-testing-library/src/serviceWorker.js",
+  "/home/richard/sd-09-project-react-testing-library/src/services/pokedexService.js",
+  "/home/richard/sd-09-project-react-testing-library/src/setupTests.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/About.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/App.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/FavoritePokemons.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/NotFound.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/Pokedex.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/Pokemon.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/tests/PokemonDetails.test.js",
+  "/home/richard/sd-09-project-react-testing-library/src/types/index.js",
+  "/home/richard/sd-09-project-react-testing-library/stryker.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/About.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/App.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/FavoritePokemons.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/NotFound.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/Pokedex.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/Pokemon.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/stryker/PokemonDetails.conf.json",
+  "/home/richard/sd-09-project-react-testing-library/testefalhando.png",
+  "/home/richard/sd-09-project-react-testing-library/testepassando.png"
+]
+17:26:43 (45658) DEBUG InputFileResolver Files to mutate: [
+  "/home/richard/sd-09-project-react-testing-library/src/App.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/About.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/FavoritePokemons.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/NotFound.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/Pokedex.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/Pokemon.js",
+  "/home/richard/sd-09-project-react-testing-library/src/components/PokemonDetails.js"
+]
+17:26:43 (45658) DEBUG TemporaryDirectory Using temp directory "/home/richard/sd-09-project-react-testing-library/.stryker-tmp"
+17:26:43 (45658) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+17:26:43 (45658) INFO InitialTestExecutor Starting initial test run. This may take a while.
+17:26:43 (45658) DEBUG Sandbox Creating a sandbox for files in /home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446
+17:26:43 (45658) DEBUG Sandbox Creating test runner 0
+17:26:43 (45658) DEBUG ChildProcessProxy Starting /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 45671
+17:26:43 (45671) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446
+17:26:43 (45671) DEBUG PluginLoader Loading @stryker-mutator/* from /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator
+17:26:43 (45671) DEBUG PluginLoader Loading plugin "/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator" (matched with expression @stryker-mutator/*)
+17:26:43 (45671) DEBUG PluginLoader Loading plugin "/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+17:26:43 (45671) DEBUG PluginLoader Loading plugins /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/javascript-mutator
+17:26:43 (45671) DEBUG PluginLoader Loading plugins /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/jest-runner
+17:26:43 (45671) DEBUG PluginLoader Loading plugins /home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/reporters/index.js
+17:26:43 (45671) TRACE JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!src/index.js",
+    "!src/serviceWorker.js"
+  ],
+  "setupFiles": [
+    "/home/richard/sd-09-project-react-testing-library/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jest-environment-jsdom-fourteen",
+  "transform": {
+    "^.+\\.(js|jsx|ts|tsx)$": "/home/richard/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/home/richard/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "/home/richard/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "jest-watch-typeahead/filename",
+    "jest-watch-typeahead/testname"
+  ],
+  "rootDir": "/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446"
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+17:26:43 (45671) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+17:26:43 (45671) DEBUG JestTestRunner Project root is /home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446
+17:26:43 (45658) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+17:26:43 (45671) TRACE JestLessThan25TestAdapter Invoking Jest with config {"roots":["<rootDir>/src"],"collectCoverageFrom":["**/*.{js,jsx}","!src/index.js","!src/serviceWorker.js"],"setupFiles":["/home/richard/sd-09-project-react-testing-library/node_modules/react-app-polyfill/jsdom.js"],"setupFilesAfterEnv":["<rootDir>/src/setupTests.js"],"testMatch":["<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}","<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"],"testEnvironment":"jest-environment-jsdom-fourteen","transform":{"^.+\\.(js|jsx|ts|tsx)$":"/home/richard/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/babelTransform.js","^.+\\.css$":"/home/richard/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/cssTransform.js","^(?!.*\\.(js|jsx|ts|tsx|css|json)$)":"/home/richard/sd-09-project-react-testing-library/node_modules/react-scripts/config/jest/fileTransform.js"},"transformIgnorePatterns":["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$","^.+\\.module\\.(css|sass|scss)$"],"modulePaths":[],"moduleNameMapper":{"^react-native$":"react-native-web","^.+\\.module\\.(css|sass|scss)$":"identity-obj-proxy"},"moduleFileExtensions":["web.js","js","web.ts","ts","web.tsx","tsx","json","web.jsx","jsx","node"],"watchPlugins":["jest-watch-typeahead/filename","jest-watch-typeahead/testname"],"rootDir":"/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446","collectCoverage":false,"verbose":false,"bail":false,"notify":false,"reporters":[]}
+17:26:48 (45658) DEBUG ChildProcessProxy Disposing of worker process 45671
+17:26:48 (45658) DEBUG ChildProcessProxy Kill 45671
+17:26:48 (45658) ERROR InitialTestExecutor One or more tests failed in the initial test run:
+	tests the component App.js renders the main page after loads URL path /`
+		TestingLibraryElementError: Unable to find an accessible element with the role "heading" and name `/Encountered pokémons/i`
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+[36m<body>[39m
+  [36m<div>[39m
+    [0mcomponent[0m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446/src/tests/App.test.js:10:21)
+    at Object.asyncJestTest (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (<anonymous>)
+    at mapper (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+	tests the component App.js contains navigation links on the top of the application
+		TestingLibraryElementError: Unable to find an accessible element with the role "link" and name `/Home/i`
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+[36m<body>[39m
+  [36m<div>[39m
+    [0mcomponent[0m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446/src/tests/App.test.js:20:18)
+    at Object.asyncJestTest (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (<anonymous>)
+    at mapper (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+	tests the component App.js returns to main page by clicking in home link text
+		TestingLibraryElementError: Unable to find an accessible element with the role "link" and name `/Home/i`
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+[36m<body>[39m
+  [36m<div>[39m
+    [0mcomponent[0m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446/src/tests/App.test.js:40:22)
+    at Object.asyncJestTest (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (<anonymous>)
+    at mapper (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+	tests the component App.js goes to about page by clicking in about link text
+		TestingLibraryElementError: Unable to find an accessible element with the role "link" and name `/About/i`
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+[36m<body>[39m
+  [36m<div>[39m
+    [0mcomponent[0m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446/src/tests/App.test.js:53:23)
+    at Object.asyncJestTest (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (<anonymous>)
+    at mapper (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+	tests the component App.js goes to favorite pokémons page by clicking in favorite pokémons link text
+		TestingLibraryElementError: Unable to find an accessible element with the role "link" and name `/Favorite Pokémons/i`
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+[36m<body>[39m
+  [36m<div>[39m
+    [0mcomponent[0m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446/src/tests/App.test.js:66:30)
+    at Object.asyncJestTest (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (<anonymous>)
+    at mapper (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+	tests the component App.js goes to Not found page by passing an unknown URL
+		TestingLibraryElementError: Unable to find an accessible element with the role "heading" and name `/Page requested not found/i`
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+[36m<body>[39m
+  [36m<div>[39m
+    [0mcomponent[0m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/home/richard/sd-09-project-react-testing-library/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/richard/sd-09-project-react-testing-library/.stryker-tmp/sandbox1422446/src/tests/App.test.js:80:26)
+    at Object.asyncJestTest (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (<anonymous>)
+    at mapper (/home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /home/richard/sd-09-project-react-testing-library/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+17:26:48 (45658) ERROR StrykerCli an error occurred Error: There were failed tests in the initial test run.
+    at InitialTestExecutor.validateResult (/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:69:27)
+    at InitialTestExecutor.run (/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:41:14)
+    at async Stryker.runMutationTest (/home/richard/sd-09-project-react-testing-library/node_modules/@stryker-mutator/core/src/Stryker.js:53:38)
